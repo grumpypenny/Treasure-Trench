@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 	/// </summary>	
 	private void FixedUpdate()
 	{
-		float input = Input.GetAxisRaw("Horizontal");
+		float input = Input.GetAxis("Horizontal");
 		Vector2 value = new Vector2(input, 0);
 		value = value.normalized;
 
