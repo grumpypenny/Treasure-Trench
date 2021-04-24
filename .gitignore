@@ -10,6 +10,7 @@
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
+[Uu]serSettings/
 .vs/
 # file on crash reports
 sysinfo.txt
