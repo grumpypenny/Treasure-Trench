@@ -52,9 +52,11 @@ public class ExplodeFish : Fish
 		isExploding = true;
 		rb.velocity = Vector2.zero;
 		
-		animator.Play("Explode");
+		animator.Play("StartExplode");
 
 		yield return new WaitForSeconds(explosionChargeTime);
+
+		animator.Play("Explode");
 
 		Explode();
 	}
