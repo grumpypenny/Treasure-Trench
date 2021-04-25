@@ -11,6 +11,7 @@ TagManager:
   - Salmon
   - SwordFish
   - PufferFish
+  - Eel
   layers:
   - Default
   - TransparentFX

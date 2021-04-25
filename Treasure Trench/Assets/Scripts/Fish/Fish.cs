@@ -60,6 +60,5 @@ public class Fish : MonoBehaviour
 		{
 			health.DealDamage(damage);
 		}
-		gameObject.SetActive(false);
 	}
 }

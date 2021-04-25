@@ -359,6 +359,8 @@ MonoBehaviour:
   - {fileID: 8727113167180407314, guid: c21750d5982e4b147aedf1dc473c45f4, type: 3}
   - {fileID: 8727113167180407314, guid: 2c15d52bb616f014eb03fe019147bcbf, type: 3}
   - {fileID: 5728984403257014053, guid: 202ee1df981a43642a76f235ce9e4dd4, type: 3}
+  - {fileID: 5728984403257014053, guid: a0610b20a1e23544eb416e75600241b4, type: 3}
+  - {fileID: 8727113167180407314, guid: 128caca1e8302364b95b8dc5a0cd9a59, type: 3}
   amountToPool: 20
   spawnPosition: {fileID: 0}
 --- !u!1 &608553664
@@ -416,6 +418,8 @@ MonoBehaviour:
   class2EvolveRate: 0.08
   class2Fish:
   - SwordFish
+  - Eel
+  - PufferFish
   class3Weight: 0
   class3EvolveRate: 0.05
   class3Fish: []
