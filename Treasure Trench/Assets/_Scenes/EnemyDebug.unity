@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &250458874 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3252044732128847970, guid: aeeb3a7d653a30c46ab00c36352882a5, type: 3}
-  m_PrefabInstance: {fileID: 474355595}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &372382665
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +135,7 @@ GameObject:
   - component: {fileID: 372382667}
   - component: {fileID: 372382666}
   - component: {fileID: 372382669}
+  - component: {fileID: 372382670}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -244,6 +240,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &372382670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372382665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a265aeb8b78cd844be1c8dca34141e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &474355595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,7 +360,7 @@ MonoBehaviour:
   - {fileID: 8727113167180407314, guid: 2c15d52bb616f014eb03fe019147bcbf, type: 3}
   - {fileID: 5728984403257014053, guid: 202ee1df981a43642a76f235ce9e4dd4, type: 3}
   amountToPool: 20
-  spawnPosition: {fileID: 250458874}
+  spawnPosition: {fileID: 0}
 --- !u!1 &608553664
 GameObject:
   m_ObjectHideFlags: 0
