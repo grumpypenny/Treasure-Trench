@@ -36,13 +36,14 @@ public class PlayerShooting : MonoBehaviour
 		}
 		if (fireup)
 		{
+			torpedo.GetComponent<Projectile>().SetDirection(upFire.up);
 			torpedo.transform.position = upFire.position;
-			torpedo.transform.eulerAngles = upFire.eulerAngles;
 		} else
 		{
 			torpedo.transform.position = downFire.position;
-			torpedo.transform.eulerAngles = downFire.eulerAngles;
+			torpedo.GetComponent<Projectile>().SetDirection(downFire.up);
 		}
+
 		lastFireTime = Time.time;
 		torpedo.SetActive(true);
 	}
