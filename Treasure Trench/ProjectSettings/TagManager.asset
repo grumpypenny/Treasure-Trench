@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Torpedo
   - BubbleProjectile
-  - Fish
+  - RedSnapper
+  - Tuna
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 778630431
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
