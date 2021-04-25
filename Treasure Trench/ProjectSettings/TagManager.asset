@@ -8,6 +8,9 @@ TagManager:
   - BubbleProjectile
   - RedSnapper
   - Tuna
+  - Salmon
+  - SwordFish
+  - PufferFish
   layers:
   - Default
   - TransparentFX
