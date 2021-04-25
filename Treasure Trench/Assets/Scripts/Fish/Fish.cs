@@ -23,7 +23,7 @@ public class Fish : MonoBehaviour
 		minX = -Camera.main.orthographicSize + 2f;
 		maxX = Camera.main.orthographicSize - 2f;
 
-		startY = -Camera.main.orthographicSize - 1f;
+		startY = -Camera.main.orthographicSize - 0.2f;
 		endY = Camera.main.orthographicSize + 1f;
 
 		transform.position = new Vector2(Random.Range(minX, maxX), startY);

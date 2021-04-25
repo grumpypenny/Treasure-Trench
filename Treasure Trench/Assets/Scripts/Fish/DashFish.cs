@@ -15,13 +15,15 @@ public class DashFish : Fish
 	{
 		base.Start();
 		player = GameObject.FindGameObjectWithTag("Player").transform;
-
 		coolDown = coolDownTime;
 	}
 
 	private void Update()
 	{
 		if (isDashing)
+			return;
+
+		if (player == null)
 			return;
 
 		// Check if it is above the player
@@ -46,31 +48,34 @@ public class DashFish : Fish
 
 	private IEnumerator Dash()
 	{
-		isDashing = true;
-		rb.velocity = Vector2.zero;
-
-		Quaternion startRotation = transform.rotation;
-		
-		Vector2 dir = (player.position - transform.position) * directionMultiplier;
-		dir.Normalize();
-		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-		Quaternion endRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-		float rotationProgress = 0;
-		while (rotationProgress < 1 && rotationProgress >= 0)
+		if (player != null)
 		{
-			rotationProgress += Time.deltaTime * dashChargeTime;
-			transform.rotation = Quaternion.Lerp(startRotation, endRotation, rotationProgress);
-			yield return null;
+			isDashing = true;
+			rb.velocity = Vector2.zero;
+
+			Quaternion startRotation = transform.rotation;
+
+			Vector2 dir = (player.position - transform.position) * directionMultiplier;
+			dir.Normalize();
+			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+			Quaternion endRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+			float rotationProgress = 0;
+			while (rotationProgress < 1 && rotationProgress >= 0)
+			{
+				rotationProgress += Time.deltaTime * dashChargeTime;
+				transform.rotation = Quaternion.Lerp(startRotation, endRotation, rotationProgress);
+				yield return null;
+			}
+
+			rb.AddForce(directionMultiplier * transform.right * dashSpeed * Time.deltaTime, ForceMode2D.Impulse);
+
+			yield return new WaitForSeconds(1f);
+
+			transform.rotation = startRotation;
+
+			isDashing = false;
 		}
-
-		rb.AddForce(directionMultiplier * transform.right * dashSpeed * Time.deltaTime, ForceMode2D.Impulse);
-
-		yield return new WaitForSeconds(1f);
-
-		transform.rotation = startRotation;
-		
-		isDashing = false;
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
