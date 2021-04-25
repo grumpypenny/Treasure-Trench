@@ -19,10 +19,9 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		float input = Input.GetAxisRaw("Vertical");
-		if (Input.GetButtonDown("Vertical") && Time.time > lastFireTime + timeBetweenShots)
+		if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && Time.time > lastFireTime + timeBetweenShots)
 		{
-			Fire(input > 0);
+			Fire(Input.GetButtonDown("Fire1"));
 		}
 	}
 

@@ -20,8 +20,7 @@ public class PlayerMovement : MonoBehaviour
 	/// </summary>	
 	private void FixedUpdate()
 	{
-		float input = Input.GetAxis("Horizontal");
-		Vector2 value = new Vector2(input, 0);
+		Vector2 value = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 		value = value.normalized;
 
 		rb.MovePosition((Vector2)transform.position + value * moveSpeed * Time.deltaTime);
