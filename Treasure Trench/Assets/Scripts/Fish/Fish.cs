@@ -19,8 +19,8 @@ public class Fish : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 		sr = GetComponent<SpriteRenderer>();
 
-		minX = -2 * Camera.main.orthographicSize + 2f;
-		maxX = 2 * Camera.main.orthographicSize - 2f;
+		minX = -Camera.main.orthographicSize + 2f;
+		maxX = Camera.main.orthographicSize - 2f;
 
 		startY = -Camera.main.orthographicSize - 1f;
 		endY = Camera.main.orthographicSize + 1f;
