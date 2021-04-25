@@ -4,8 +4,6 @@ using UnityEngine;
 public class Fish : MonoBehaviour
 {
 	public int damage;
-	public float minX;
-	public float maxX;
 	public Vector2 moveSpeed;
 
 	protected Rigidbody2D rb;
@@ -13,11 +11,16 @@ public class Fish : MonoBehaviour
 	protected float directionMultiplier;
 	protected float startY;
 	protected float endY;
+	protected float minX;
+	protected float maxX;
 
 	protected void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		sr = GetComponent<SpriteRenderer>();
+
+		minX = -2 * Camera.main.orthographicSize + 2f;
+		maxX = 2 * Camera.main.orthographicSize - 2f;
 
 		startY = -Camera.main.orthographicSize - 1f;
 		endY = Camera.main.orthographicSize + 1f;
