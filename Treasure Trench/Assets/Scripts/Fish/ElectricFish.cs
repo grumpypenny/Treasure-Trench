@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ElectricFish : Fish
 {
+
 	public float lightOutageDuration;
 
 	private void OnTriggerEnter2D(Collider2D collider)
