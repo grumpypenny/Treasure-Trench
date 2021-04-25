@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Fish : MonoBehaviour
 {
+	public int score;
 	public int damage;
 	public Vector2 moveSpeed;
 
@@ -50,5 +51,15 @@ public class Fish : MonoBehaviour
 		// Despawn this fish
 		if (rb.position.y > endY)
 			gameObject.SetActive(false);
+	}
+
+	private void OnTriggerEnter2D(Collider2D collider)
+	{
+		IHealth health = collider.gameObject.GetComponent<IHealth>();
+		if (health != null)
+		{
+			health.DealDamage(damage);
+		}
+		gameObject.SetActive(false);
 	}
 }
