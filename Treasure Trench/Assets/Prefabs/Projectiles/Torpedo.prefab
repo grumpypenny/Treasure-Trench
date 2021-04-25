@@ -136,3 +136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   damage: 0
+  fishLayer:
+    serializedVersion: 2
+    m_Bits: 512
