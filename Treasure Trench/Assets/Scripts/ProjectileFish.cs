@@ -35,12 +35,21 @@ public class ProjectileFish : Fish
 		Vector2 dir = player.position - transform.position;
 		dir.Normalize();
 		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-		Debug.Log(angle);
 		sr.flipX = Mathf.Abs(angle) >= 90;
 	}
 
 	private void Fire()
 	{
+		GameObject proj = ObjectPool.instance.GetPooledObject("BubbleProjectile");
+		if (proj == null)
+		{
+			return;
+		}
 
+		Vector2 dir = player.position - transform.position;
+		dir.Normalize();
+		proj.GetComponent<Projectile>().SetDirection(dir);
+		proj.transform.position = transform.position;
+		proj.SetActive(true);
 	}
 }
