@@ -64,4 +64,14 @@ public class Menu : MonoBehaviour
 
 		SceneManager.LoadScene(sceneToLoad);
 	}
+
+	public void LoadScene()
+	{
+		SceneManager.LoadScene(sceneToLoad);
+	}
+
+	public void LoadMainMenu()
+	{
+		SceneManager.LoadScene(0);
+	}
 }
