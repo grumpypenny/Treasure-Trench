@@ -26,6 +26,7 @@ public class ColourChange : MonoBehaviour
     {
 		time = Mathf.Clamp(time + Time.deltaTime, 0f, duration);
 
-		t.color = Color.Lerp(start, end, time * speed);    
+		t.color = Color.Lerp(start, end, time * speed / duration);
+		print(t.color);
     }
 }
