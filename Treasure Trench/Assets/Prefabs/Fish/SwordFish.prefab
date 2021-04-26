@@ -167,6 +167,6 @@ MonoBehaviour:
   score: 20
   damage: 1
   moveSpeed: {x: 120, y: 5}
-  dashSpeed: 380
+  dashSpeed: 760
   dashChargeTime: 2
   coolDownTime: 8

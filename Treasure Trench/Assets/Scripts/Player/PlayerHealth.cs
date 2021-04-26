@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
 {
 
 	public Image healthBar;
+	public Animator canvas;
 
 	public int maxHealth = 3;
 	[SerializeField] private int health;
@@ -26,8 +27,6 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		light2d = GetComponentInChildren<Light2D>();
 		startRadius = light2d.pointLightInnerRadius;
 		rb = GetComponent<Rigidbody2D>();
-
-		Debug.Log(startRadius);
 	}
 
 	void IHealth.DealDamage(int damage)
@@ -46,8 +45,6 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		health = maxHealth;
 		light2d.pointLightInnerRadius = startRadius;
 		healthBar.fillAmount = 1f;
-
-		Debug.Log("HEAL");
 
 		GetComponent<PlayerLightManager>().SetRadius(startRadius);
 	}
@@ -79,7 +76,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		anim.SetTrigger("Die");
 		rb.gravityScale = 2;
 		GetComponent<PlayerMovement>().enabled = false;
-		FindObjectOfType<Canvas>().GetComponent<Animator>().SetTrigger("Die");
+		canvas.SetTrigger("Die");
 	}
 
 	IEnumerator delay()

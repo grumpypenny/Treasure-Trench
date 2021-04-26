@@ -43,8 +43,8 @@ public class FishSpawner : MonoBehaviour
 		}
 		else
 		{
-			class2Weight = Mathf.Lerp(1f, 0.5f, Mathf.Clamp01(class2EvolveRate * stageTime / stageDuration));
-			class3Weight = Mathf.Lerp(0f, 0.5f, Mathf.Clamp01(class3EvolveRate * stageTime / stageDuration));
+			class2Weight = Mathf.Lerp(1f, 0.05f, Mathf.Clamp01(class2EvolveRate * stageTime / stageDuration));
+			class3Weight = Mathf.Lerp(0f, 2f, Mathf.Clamp01(class3EvolveRate * stageTime / stageDuration));
 		}
 
 		if (class2Weight == 1f && stage == 0)

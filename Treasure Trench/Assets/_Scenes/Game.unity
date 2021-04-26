@@ -265,13 +265,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1351978260, guid: aeeb3a7d653a30c46ab00c36352882a5, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1663600870}
+    - target: {fileID: 1351978260, guid: aeeb3a7d653a30c46ab00c36352882a5, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 495134190}
-    - target: {fileID: 1351978260, guid: aeeb3a7d653a30c46ab00c36352882a5, type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 264019073428658824, guid: aeeb3a7d653a30c46ab00c36352882a5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -344,26 +344,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 608553666, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 608553666, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
-      propertyPath: spawnRate
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 609769180, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
-      propertyPath: tileUpdateInterval
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 609769181, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
-      propertyPath: tileUpdateInterval
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 612165759223985326, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
-      propertyPath: m_Volume
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 2729545863124416265, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -633,6 +613,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1903148abf890ad498abf7ecb53bc010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1663600870 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1794837466, guid: 482921d730d7cfd45825a575f2a90947, type: 3}
+  m_PrefabInstance: {fileID: 1860798925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1747652948
 GameObject:
   m_ObjectHideFlags: 0

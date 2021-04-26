@@ -600,7 +600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 5
+  canvas: {fileID: 0}
+  maxHealth: 10
   health: 0
 --- !u!114 &926727390033923139
 MonoBehaviour:
