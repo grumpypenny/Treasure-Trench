@@ -15,6 +15,11 @@ public class ExplodeFish : Fish
 	private Animator animator;
 	private float squaredTriggerDistance;
 
+	private void OnEnable()
+	{
+		isExploding = false;
+	}
+
 	private new void Start()
 	{
 		base.Start();
