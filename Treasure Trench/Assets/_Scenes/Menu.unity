@@ -710,5 +710,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7715799038139609526, guid: 64e969abfe68e1148ba3ac4f95adb850, type: 3}
+      propertyPath: m_text
+      value: 'Hello!
+
+
+        This is a submission for ludum dare 48: deeper and
+        deeper!'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e969abfe68e1148ba3ac4f95adb850, type: 3}
