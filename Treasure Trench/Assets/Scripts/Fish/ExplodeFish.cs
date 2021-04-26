@@ -19,6 +19,14 @@ public class ExplodeFish : Fish
 	private void OnEnable()
 	{
 		isExploding = false;
+
+		startY = -Camera.main.orthographicSize - 0.2f;
+		endY = Camera.main.orthographicSize + 1f;
+
+		transform.position = new Vector2(Random.Range(minX, maxX), startY);
+		directionMultiplier = Random.value > 0.5f ? 1 : -1;
+		sr = GetComponent<SpriteRenderer>();
+		sr.flipX = directionMultiplier != 1;
 	}
 
 	private new void Start()

@@ -46,6 +46,10 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		health = maxHealth;
 		light2d.pointLightInnerRadius = startRadius;
 		healthBar.fillAmount = 1f;
+
+		Debug.Log("HEAL");
+
+		GetComponent<PlayerLightManager>().SetRadius(startRadius);
 	}
 
 	private void GetHit()

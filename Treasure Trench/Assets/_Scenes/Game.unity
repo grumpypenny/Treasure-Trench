@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 495134190}
+    - target: {fileID: 1351978260, guid: aeeb3a7d653a30c46ab00c36352882a5, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 264019073428658824, guid: aeeb3a7d653a30c46ab00c36352882a5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -340,6 +344,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 608553666, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 608553666, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
+      propertyPath: spawnRate
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 609769180, guid: 707006ba37cc86544bdaf48e040ea258, type: 3}
       propertyPath: tileUpdateInterval
       value: 0.2
