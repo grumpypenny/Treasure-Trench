@@ -50,6 +50,11 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
 	private void GetHit()
 	{
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("hit"))
+		{
+			return;
+		}
+
 		anim.SetTrigger("Hit");
 
 		if (GetComponent<PlayerLightManager>().isLightOut)
@@ -58,6 +63,8 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		// make the light smaller
 		light2d.pointLightInnerRadius -= startRadius / maxHealth;
 		healthBar.fillAmount = (float)health / (float)maxHealth;
+
+		Camera.main.GetComponent<CameraShake>().Shake(0.08f, 0.5f);
 	}
 	private void Die()
 	{
