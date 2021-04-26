@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,8 +8,13 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Animator))]
 public class Menu : MonoBehaviour
 {
+
+	public Animator submarineAnimator;
+
 	public int sceneToLoad = 1;
 	private Animator anim;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +50,18 @@ public class Menu : MonoBehaviour
 
 	public void Play()
 	{
-		SceneManager.LoadScene(sceneToLoad);
+		anim.SetTrigger("StartGame");
+		StartCoroutine(StartGame());
 	}
 
+	IEnumerator StartGame()
+	{
+		yield return new WaitForSeconds(2f);
 
+		submarineAnimator.SetTrigger("StartGame");
+
+		yield return new WaitForSeconds(5f);
+
+		SceneManager.LoadScene(sceneToLoad);
+	}
 }
