@@ -24,15 +24,6 @@ public class Projectile : MonoBehaviour
 		rb.MovePosition(transform.position + transform.right * speed * Time.deltaTime);
 		if (!rend.isVisible)
 		{
-			if (gameObject.tag.Equals("Torpedo"))
-			{
-				Transform bubbleEffect = transform.GetChild(0);
-				bubbleEffect.parent = null;
-				bubbleEffect.localScale = new Vector3(0.5f, 0.5f, 1f);
-				Destroy(bubbleEffect.gameObject, 5f);
-			}
-
-
 			gameObject.SetActive(false);
 		}
 	}
