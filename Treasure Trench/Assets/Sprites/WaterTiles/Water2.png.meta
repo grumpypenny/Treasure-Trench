@@ -1,28 +1,37 @@
 fileFormatVersion: 2
-guid: 819387ee0e521784893742138a9013b7
+guid: 795d8a621469e484b81683f7d7a404c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1532853197559362514
-    second: Water1_0
+      213: -6559946417490655688
+    second: Water2_0
   - first:
-      213: 809547178622862236
-    second: Water1_1
+      213: -5495574498418647877
+    second: Water2_1
   - first:
-      213: 3033841039805340799
-    second: Water1_2
+      213: 4067552751015703725
+    second: Water2_2
   - first:
-      213: -6816637556107595983
-    second: Water1_3
+      213: -1663592659739363303
+    second: Water2_3
   - first:
-      213: -9176021797930373718
-    second: Water1_4
+      213: 6031934397189544382
+    second: Water2_4
   - first:
-      213: -653203278338066326
-    second: Water1_5
+      213: -3245268177397053658
+    second: Water2_5
   - first:
-      213: 3686092136246798233
-    second: Water1_6
+      213: 3707081560237110482
+    second: Water2_6
+  - first:
+      213: -3289403487940908623
+    second: Water2_7
+  - first:
+      213: -6802123892340549892
+    second: Water2_8
+  - first:
+      213: 2852513995585597880
+    second: Water2_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water1_0
+      name: Water2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -138,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d3f85d9cd9c54510800000000000000
-      internalID: 1532853197559362514
+      spriteID: 8368fd74d7366f4a0800000000000000
+      internalID: -6559946417490655688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water1_1
+      name: Water2_1
       rect:
         serializedVersion: 2
         x: 32
@@ -159,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c934cbaaed61c3b00800000000000000
-      internalID: 809547178622862236
+      spriteID: bbc9f094c1ccbb3b0800000000000000
+      internalID: -5495574498418647877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water1_2
+      name: Water2_2
       rect:
         serializedVersion: 2
         x: 64
@@ -180,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7c599a0a5e5a1a20800000000000000
-      internalID: 3033841039805340799
+      spriteID: da4347d1da9d27830800000000000000
+      internalID: 4067552751015703725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water1_3
+      name: Water2_3
       rect:
         serializedVersion: 2
         x: 96
@@ -201,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13fae9142407661a0800000000000000
-      internalID: -6816637556107595983
+      spriteID: 918b9414a4bb9e8e0800000000000000
+      internalID: -1663592659739363303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water1_4
+      name: Water2_4
       rect:
         serializedVersion: 2
         x: 128
@@ -222,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad6e1b9ac838a080800000000000000
-      internalID: -9176021797930373718
+      spriteID: eb951fc206cb5b350800000000000000
+      internalID: 6031934397189544382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water1_5
+      name: Water2_5
       rect:
         serializedVersion: 2
         x: 160
@@ -243,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a68f984441b5fe6f0800000000000000
-      internalID: -653203278338066326
+      spriteID: 6278e5d69cd76f2d0800000000000000
+      internalID: -3245268177397053658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water1_6
+      name: Water2_6
       rect:
         serializedVersion: 2
         x: 192
@@ -264,8 +273,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 997e956a441a72330800000000000000
-      internalID: 3686092136246798233
+      spriteID: 2d4755fb903327330800000000000000
+      internalID: 3707081560237110482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water2_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9e95aa4f0b952d0800000000000000
+      internalID: -3289403487940908623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water2_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf618deeb500a91a0800000000000000
+      internalID: -6802123892340549892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water2_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1b5bf9d5a269720800000000000000
+      internalID: 2852513995585597880
       vertices: []
       indices: 
       edges: []
