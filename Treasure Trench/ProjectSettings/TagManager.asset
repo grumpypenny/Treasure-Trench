@@ -13,6 +13,9 @@ TagManager:
   - PufferFish
   - Eel
   - AnglerFish
+  - PistolShrimp
+  - Squid
+  - InkProjectile
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,11 @@ public class PlayerLightManager : MonoBehaviour
 		StartCoroutine(DisableLights(duration));
 	}
 
+	public void TakeOutLightsFast(float duration)
+	{
+		StartCoroutine(DisableLightsFast(duration));
+	}
+
 	IEnumerator DisableLights(float duration)
 	{
 		isLightOut = true;
@@ -31,6 +36,25 @@ public class PlayerLightManager : MonoBehaviour
 		
 		isLightOut = false;
 
+		submarineLight.pointLightInnerRadius = currRadius;
+	}
+
+	IEnumerator DisableLightsFast(float duration)
+	{
+		isLightOut = true;
+		float currRadius = submarineLight.pointLightInnerRadius;
+		float time = 0f;
+
+		while(time < 1f)
+		{
+			submarineLight.pointLightInnerRadius = Mathf.Lerp(currRadius, 0.2f, time);
+			time += Time.deltaTime;
+			yield return null;
+		}
+
+		yield return new WaitForSeconds(duration);
+
+		isLightOut = false;
 		submarineLight.pointLightInnerRadius = currRadius;
 	}
 }
