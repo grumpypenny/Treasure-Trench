@@ -31,7 +31,8 @@ public class ExplodeFish : Fish
 	{
 		if (isExploding)
 			return;
-
+		if (player == null)
+			return;
 		// Check if is within player range
 		Vector2 distVector = transform.position - player.position;
 		if (Vector2.SqrMagnitude(distVector) <= squaredTriggerDistance)

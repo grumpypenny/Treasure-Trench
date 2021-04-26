@@ -16,6 +16,7 @@ TagManager:
   - PistolShrimp
   - Squid
   - InkProjectile
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Player
   - EnemyProjectile
   - Fish
-  - 
+  - Coin
   - 
   - 
   - 
