@@ -14,7 +14,12 @@ public class DashFish : Fish
 	private new void Start()
 	{
 		base.Start();
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+
+		if (GameObject.FindGameObjectWithTag("Player") == null)
+			player = null;
+		else
+			player = GameObject.FindGameObjectWithTag("Player").transform;
+		
 		coolDown = coolDownTime;
 	}
 
