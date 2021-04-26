@@ -58,6 +58,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		anim.SetTrigger("Die");
 		rb.gravityScale = 2;
 		GetComponent<PlayerMovement>().enabled = false;
+		FindObjectOfType<Canvas>().GetComponent<Animator>().SetTrigger("Die");
 	}
 
 	IEnumerator delay()
