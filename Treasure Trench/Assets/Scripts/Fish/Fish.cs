@@ -15,6 +15,16 @@ public class Fish : MonoBehaviour
 	protected float minX;
 	protected float maxX;
 
+	private void Awake()
+	{
+		startY = -Camera.main.orthographicSize - 0.2f;
+		endY = Camera.main.orthographicSize + 1f;
+
+		transform.position = new Vector2(Random.Range(minX, maxX), startY);
+		directionMultiplier = Random.value > 0.5f ? 1 : -1;
+		sr.flipX = directionMultiplier != 1;
+	}
+
 	protected void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
