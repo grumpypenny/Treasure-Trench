@@ -10,6 +10,7 @@ public class ExplodeFish : Fish
 	public AudioClip explosionSound;
 
 	private bool isExploding;
+	private GameObject playerObj;
 	private Transform player;
 	private AudioSource explosionAudioSource;
 	private Animator animator;
@@ -23,8 +24,10 @@ public class ExplodeFish : Fish
 	private new void Start()
 	{
 		base.Start();
-		
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+
+		playerObj = GameObject.FindGameObjectWithTag("Player");
+		if (playerObj != null)
+			player = playerObj.transform;
 		explosionAudioSource = GetComponent<AudioSource>();
 		animator = GetComponent<Animator>();
 

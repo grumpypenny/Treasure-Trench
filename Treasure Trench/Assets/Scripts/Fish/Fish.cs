@@ -15,13 +15,14 @@ public class Fish : MonoBehaviour
 	protected float minX;
 	protected float maxX;
 
-	private void Awake()
+	private void OnEnable()
 	{
 		startY = -Camera.main.orthographicSize - 0.2f;
 		endY = Camera.main.orthographicSize + 1f;
 
 		transform.position = new Vector2(Random.Range(minX, maxX), startY);
 		directionMultiplier = Random.value > 0.5f ? 1 : -1;
+		sr = GetComponent<SpriteRenderer>();
 		sr.flipX = directionMultiplier != 1;
 	}
 
