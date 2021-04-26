@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		light2d = GetComponentInChildren<Light2D>();
 		startRadius = light2d.pointLightInnerRadius;
 		rb = GetComponent<Rigidbody2D>();
+
+		Debug.Log(startRadius);
 	}
 
 	void IHealth.DealDamage(int damage)
@@ -35,13 +37,21 @@ public class PlayerHealth : MonoBehaviour, IHealth
 		GetHit();
 	}
 
+	void IHealth.Heal()
+	{
+		health = maxHealth;
+	}
+
 	private void GetHit()
 	{
 		anim.SetTrigger("Hit");
+
+		if (GetComponent<PlayerLightManager>().isLightOut)
+			return;
 		// make the light smaller
 		light2d.pointLightInnerRadius -= startRadius / maxHealth;
+		Debug.Log(light2d.pointLightInnerRadius);
 	}
-
 	private void Die()
 	{
 		StartCoroutine(delay());

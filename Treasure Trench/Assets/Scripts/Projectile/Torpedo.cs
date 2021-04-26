@@ -9,11 +9,18 @@ public class Torpedo : Projectile
 	{
 		if (fishLayer == (fishLayer | (1 << collider.gameObject.layer)))
 		{
+			if (collider.gameObject.tag.Equals("AnglerFish"))
+			{
+				GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+				if (player != null)
+					player.GetComponent<IHealth>().Heal();
+			}
+
 			int score = collider.gameObject.GetComponent<Fish>().score;
 			collider.gameObject.SetActive(false);
 			FindObjectOfType<ScoreManager>().UpdateScore(score);
 		}
 		gameObject.SetActive(false);
-
 	}
 }
