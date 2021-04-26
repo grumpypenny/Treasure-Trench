@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
@@ -7,6 +5,8 @@ public class PlayerShooting : MonoBehaviour
 	public Transform upFire;
 	public Transform downFire;
 
+	public AudioSource shootSoundSource;
+	public AudioClip shootSound;
 	public float timeBetweenShots;
 
 	private float lastFireTime;
@@ -45,5 +45,7 @@ public class PlayerShooting : MonoBehaviour
 
 		lastFireTime = Time.time;
 		torpedo.SetActive(true);
+
+		shootSoundSource.PlayOneShot(shootSound);
 	}
 }

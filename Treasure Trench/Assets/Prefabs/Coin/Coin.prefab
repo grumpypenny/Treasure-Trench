@@ -119,6 +119,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+  coinBeep: {fileID: 8300000, guid: 740ea140899d21344bc83b8c7c9a5dc3, type: 3}
 --- !u!114 &1969163620553609744
 MonoBehaviour:
   m_ObjectHideFlags: 0
