@@ -546,6 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reloadBar: {fileID: 1743192704}
+  reloadBarBack: {fileID: 956247396}
   upFire: {fileID: 2624812267144669496}
   downFire: {fileID: 4359126946270170337}
   shootSoundSource: {fileID: 0}

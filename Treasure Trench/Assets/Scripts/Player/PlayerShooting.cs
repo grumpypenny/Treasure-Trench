@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PlayerShooting : MonoBehaviour
 {
 	public Image reloadBar;
+	public Image reloadBarBack;
 
 	public Transform upFire;
 	public Transform downFire;
@@ -28,6 +29,8 @@ public class PlayerShooting : MonoBehaviour
 		}
 
 		reloadBar.fillAmount = (Time.time - lastFireTime) / timeBetweenShots;
+		reloadBar.enabled = !(reloadBar.fillAmount == 1f);
+		reloadBarBack.enabled = !(reloadBar.fillAmount == 1f);
 	}
 
 	private void Fire(bool fireup)

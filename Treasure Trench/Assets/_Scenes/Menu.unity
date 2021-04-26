@@ -710,6 +710,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7715799037949813463, guid: 64e969abfe68e1148ba3ac4f95adb850, type: 3}
+      propertyPath: m_text
+      value: 'Desend into the trench to get as much gold as you can!
+
+
+        W,A,S,D
+        to move around
+
+
+        Left-click to shoot down
+
+        Right-click to
+        shoot up
+
+
+        Survive the depths and good luck on your journey!'
+      objectReference: {fileID: 0}
     - target: {fileID: 7715799038139609526, guid: 64e969abfe68e1148ba3ac4f95adb850, type: 3}
       propertyPath: m_text
       value: 'Hello!
