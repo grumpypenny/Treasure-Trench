@@ -610,6 +610,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2768634199442254490, guid: 64e969abfe68e1148ba3ac4f95adb850, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7715799037577247316, guid: 64e969abfe68e1148ba3ac4f95adb850, type: 3}
       propertyPath: submarineAnimator
       value: 
