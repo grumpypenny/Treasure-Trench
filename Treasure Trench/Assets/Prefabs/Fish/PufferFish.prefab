@@ -168,8 +168,8 @@ MonoBehaviour:
   score: 18
   damage: 1
   moveSpeed: {x: 80, y: 12}
-  explosionRadius: 1.71
-  explosionTriggerRange: 2.12
+  explosionRadius: 1.77
+  explosionTriggerRange: 1
   explosionChargeTime: 2
   explosionSound: {fileID: 8300000, guid: 4c91a141c7d7672489f1d75e3b8bb575, type: 3}
 --- !u!82 &1135309727

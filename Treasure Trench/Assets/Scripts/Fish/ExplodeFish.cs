@@ -58,15 +58,12 @@ public class ExplodeFish : Fish
 
 		animator.Play("Explode");
 
-		Explode();
+		yield return new WaitForSeconds(1.5f);
+
+		gameObject.SetActive(false);
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		Explode();
-	}
-
-	private void Explode()
+	public void Explode()
 	{
 		explosionAudioSource.PlayOneShot(explosionSound);
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
@@ -77,8 +74,6 @@ public class ExplodeFish : Fish
 			if (health != null)
 				health.DealDamage(damage);
 		}
-
-		gameObject.SetActive(false);
 	}
 
 	private void OnDrawGizmos()
