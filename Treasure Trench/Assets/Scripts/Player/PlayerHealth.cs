@@ -1,10 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IHealth
 {
+
+	public Image healthBar;
+
 	public int maxHealth = 3;
 	[SerializeField] private int health;
 	int IHealth.health => health;
@@ -13,6 +16,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
 	private Light2D light2d;
 	private Rigidbody2D rb;
 	private float startRadius;
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -40,6 +44,8 @@ public class PlayerHealth : MonoBehaviour, IHealth
 	void IHealth.Heal()
 	{
 		health = maxHealth;
+		light2d.pointLightInnerRadius = startRadius;
+		healthBar.fillAmount = 1f;
 	}
 
 	private void GetHit()
@@ -48,12 +54,16 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
 		if (GetComponent<PlayerLightManager>().isLightOut)
 			return;
+
 		// make the light smaller
 		light2d.pointLightInnerRadius -= startRadius / maxHealth;
-		Debug.Log(light2d.pointLightInnerRadius);
+		healthBar.fillAmount = (float)health / (float)maxHealth;
 	}
 	private void Die()
 	{
+		light2d.pointLightInnerRadius -= startRadius / maxHealth;
+		healthBar.fillAmount = (float)health / (float)maxHealth;
+
 		StartCoroutine(delay());
 		anim.SetTrigger("Die");
 		rb.gravityScale = 2;
