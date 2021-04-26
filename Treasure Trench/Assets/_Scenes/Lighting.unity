@@ -481,6 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541077294}
   - component: {fileID: 541077295}
+  - component: {fileID: 541077296}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -521,6 +522,32 @@ MonoBehaviour:
   - {fileID: 8727113167180407314, guid: c21750d5982e4b147aedf1dc473c45f4, type: 3}
   amountToPool: 20
   spawnPosition: {fileID: 250458874}
+--- !u!114 &541077296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541077293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8065ff31113aeff4b9d31da6175263d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTotal: 0
+  score: {fileID: 1402871120898748165}
+  finalScore: {fileID: 631431955}
+--- !u!114 &631431955 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1402871122656793618, guid: 482921d730d7cfd45825a575f2a90947, type: 3}
+  m_PrefabInstance: {fileID: 1402871120898748164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &735750567
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,5 +838,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGame Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1402871121224250767, guid: 482921d730d7cfd45825a575f2a90947, type: 3}
+      propertyPath: m_Name
+      value: Game Over
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402871122656793616, guid: 482921d730d7cfd45825a575f2a90947, type: 3}
+      propertyPath: m_Name
+      value: Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402871122656793618, guid: 482921d730d7cfd45825a575f2a90947, type: 3}
+      propertyPath: m_text
+      value: 'Final Score:
+
+        0'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 482921d730d7cfd45825a575f2a90947, type: 3}
+--- !u!114 &1402871120898748165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1402871121012026565, guid: 482921d730d7cfd45825a575f2a90947, type: 3}
+  m_PrefabInstance: {fileID: 1402871120898748164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
